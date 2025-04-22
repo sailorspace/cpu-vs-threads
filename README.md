@@ -26,6 +26,8 @@ Since the Singularity class is public, it can be accessed by any external code.
 The Singularity class can act as a bridge, exposing the functionality of the Singleton class (via its public methods or properties) to external code.
 Example:
 C#
+
+
 namespace caput
 {
     public class Singularity
