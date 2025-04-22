@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace caput
 {
-    internal class Singularity
-    {
-    }
 
-    class Singleton
+    //checking the code scan for this new change in the object creation
+    //start here
+    public class Singularity
+    {
+        public Singleton GetInstance = Singleton.Instance;
+    }
+    //ends here
+    public class Singleton
     {
         private static readonly Lazy<Singleton> _instance = new Lazy<Singleton>(() => new Singleton());
 
