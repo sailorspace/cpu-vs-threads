@@ -14,15 +14,15 @@ namespace caput
         public Singleton GetInstance = Singleton.Instance;
     }
     //ends here
-    internal class Singleton
+    public class Singleton
     {
         private static readonly Lazy<Singleton> _instance = new Lazy<Singleton>(() => new Singleton());
 
-        internal static Singleton Instance => _instance.Value;
+        public static Singleton Instance => _instance.Value;
 
-        internal int InstanceId { get; } = Guid.NewGuid().GetHashCode();
+        public int InstanceId { get; } = Guid.NewGuid().GetHashCode();
 
-        internal Singleton() { }
+        private Singleton() { }
     }
 
     
